@@ -19,7 +19,7 @@
 
 <!-- UTMify: instalar aqui o script da conta LATAM -->
 
-<!-- CHECKOUTS LATAM: trocar os 3 links TROCAR-CHECKOUT-* (Esencial, Completa, Popup)
+<!-- CHECKOUTS HOTMART (produto 8685232): Esencial vl9vljmu US$ 4,90 · Completa 8yv4y1gz US$ 9,90 · Popup 8v09gedf US$ 6,90
      e o seletor do back redirect pelo dominio do gateway. -->
 
 <!-- back redirect: quem tenta sair vai para a oferta de saida -->
@@ -51,7 +51,8 @@
     });
   }
 
-  setBackRedirect(link);
+  // desligado ate existir a pagina de saida em espanhol (/promo)
+  // setBackRedirect(link);
 
   document.addEventListener('DOMContentLoaded', function () {
     // O botão do plano Essencial fica de fora: ele é um link de checkout, mas o
@@ -61,7 +62,7 @@
     // ESTE SELETOR ANDA JUNTO COM O GATEWAY. Ao trocar de novo, troque o domínio
     // aqui também — senão ele para de achar os links e a página de saída passa a
     // disparar em cima de quem está indo pagar.
-    document.querySelectorAll('a[href*="TROCAR-CHECKOUT"]:not(#btn-essencial)').forEach(function (a) {
+    document.querySelectorAll('a[href*="pay.hotmart.com"]:not(#btn-essencial)').forEach(function (a) {
       a.addEventListener('click', function () { window.__indoParaCheckout = true; });
     });
     // âncoras internas por scroll programático — não mexem no histórico, então
@@ -764,7 +765,7 @@
           <li><span class="ckm">✓</span> Acceso inmediato y de por vida</li>
         </ul>
         <!-- US$ 4,90 — o clique abre o popup de upsell antes de seguir para o checkout -->
-        <a href="TROCAR-CHECKOUT-ESENCIAL" class="btn full btn-simples" id="btn-essencial">QUIERO SOLO LOS PROYECTOS</a>
+        <a href="https://pay.hotmart.com/P107941642Y?off=vl9vljmu" class="btn full btn-simples" id="btn-essencial">QUIERO SOLO LOS PROYECTOS</a>
         <p class="microaviso">↓ hay una opción mejor justo abajo</p>
       </div>
 
@@ -797,7 +798,7 @@
           <li>🎁 <span><b>BONO 6:</b> Lista de Compras para Principiantes</span></li>
         </ul>
         <!-- US$ 9,90 -->
-        <a href="TROCAR-CHECKOUT-COMPLETA" class="btn full">¡SÍ! LO QUIERO TODO</a>
+        <a href="https://pay.hotmart.com/P107941642Y?off=8yv4y1gz" class="btn full">¡SÍ! LO QUIERO TODO</a>
         <div class="selos-pgto">
           <span>🔒 Compra segura</span><span>🛡️ 7 días de garantía</span><span>⚡ Entrega inmediata</span>
         </div>
@@ -822,7 +823,7 @@
       <span>solo US$ 2 más</span>
     </div>
 
-    <a href="TROCAR-CHECKOUT-POPUP" class="btn full" id="upsell-sim">QUIERO APROVECHAR AHORA</a>
+    <a href="https://pay.hotmart.com/P107941642Y?off=8v09gedf" class="btn full" id="upsell-sim">QUIERO APROVECHAR AHORA</a>
     <button class="modal-nao" id="upsell-nao">Seguir solo con lo básico</button>
   </div>
 </div>
@@ -902,7 +903,7 @@
 <footer>
   <b>Colección de Aretes de Chaquira</b><br>
   Material digital de uso personal. No está permitida la reproducción ni la reventa de los archivos.<br>
-  Contacto: <a href="mailto:TROCAR@email.com">TROCAR@email.com</a>
+  Pago procesado por Hotmart. Soporte y reembolsos por el correo de tu compra.
 </footer>
 
 <script>
