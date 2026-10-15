@@ -194,17 +194,17 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
 .bonus h4 .num{background:#FFE14D; color:#1b1b1b; padding:1px 6px; border-radius:4px; font-weight:900}
 
 /* ---------- prova social: as capturas das alunas ----------
-   Tira de rolagem horizontal com encaixe. Com UMA captura ela ocupa a largura
-   toda; quando entrarem mais, a seguinte aparece espiando na borda e a pessoa
-   entende que da para arrastar — sem precisar de biblioteca de carrossel. */
+   Tira de rolagem horizontal com encaixe, sem biblioteca de carrossel. A largura
+   de cada captura vem de --larg, definida na propria tira: com uma captura so ela
+   fica centralizada, e abaixo de 100% a seguinte aparece espiando na borda, que e
+   o que faz a pessoa entender que da para arrastar. */
 .provas{display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory;
   padding-bottom:10px; margin-bottom:4px; scrollbar-width:none;
-  -webkit-overflow-scrolling:touch}
+  -webkit-overflow-scrolling:touch; --larg:100%}
 .provas::-webkit-scrollbar{display:none}
-.provas figure{flex:0 0 100%; scroll-snap-align:center; margin:0}
-.provas.muitas figure{flex:0 0 88%}
-.provas.estreita{justify-content:center}
-.provas.estreita figure{flex:0 0 80%}
+/* margin auto centraliza quando sobra espaco; com varias capturas nao sobra e
+   a regra nao faz nada, entao a rolagem continua comecando no inicio */
+.provas figure{flex:0 0 var(--larg); scroll-snap-align:center; margin:0 auto}
 .provas img{width:100%; height:auto; display:block; border-radius:16px;
   border:1px solid var(--borda); box-shadow:0 14px 34px rgba(35,48,57,.13)}
 .pe-foto{text-align:center; font-size:12.5px; color:var(--cinza);
@@ -410,7 +410,7 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
     <p class="chamada" style="margin-top:0">
       Mira lo que dicen las que ya<br>compraron el material 🤩</p>
 
-    <div class="provas">
+    <div class="provas" style="--larg:90%">
       <figure>
         <img src="assets/prova/wa-mariana.webp" width="640" height="1108"
              alt="Mensaje de una alumna por WhatsApp" loading="lazy">
@@ -424,7 +424,7 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
       <span class="mt mt-am">explotó.</span> Se llenó de comentarios
       preguntando dónde comprarla 😍</p>
 
-    <div class="provas">
+    <div class="provas" style="--larg:90%">
       <figure>
         <img src="assets/prova/tiktok-tigre.webp" width="640" height="1316"
              alt="387 comentarios preguntando dónde comprar la pieza" loading="lazy">
@@ -602,7 +602,7 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
       miembros. <span class="mt mt-am">Si no lo encuentras o el acceso no funciona,
       escríbenos a support@htguias.com</span></p>
 
-    <div class="provas estreita">
+    <div class="provas" style="--larg:80%">
       <figure>
         <img src="assets/prova/email-acesso.webp" width="640" height="1314"
              alt="El correo con el acceso al área de miembros" loading="lazy">
