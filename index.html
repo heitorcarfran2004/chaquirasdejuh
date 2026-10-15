@@ -165,6 +165,34 @@ details summary::after{content:"+"; color:var(--coral); font-weight:900; font-si
 details[open] summary::after{content:"−"}
 details p{margin-top:10px; font-size:15px; color:var(--cinza)}
 
+/* ---------- marca-texto e reforços da tela de oferta ---------- */
+.mt{padding:1px 7px; border-radius:5px; box-decoration-break:clone;
+  -webkit-box-decoration-break:clone; font-weight:900}
+.mt-am{background:#FFE14D; color:#1b1b1b}
+.mt-vd{background:#1FA463; color:#fff}
+.mt-rs{background:var(--coral); color:#fff}
+.mt-pr{background:#111; color:#fff}
+
+.titulao{font-family:var(--sans); font-weight:900; font-size:27px; line-height:1.3;
+  letter-spacing:-.02em; margin-bottom:14px}
+.subao{font-size:17px; line-height:1.55; color:var(--tinta); margin-bottom:18px}
+
+.checks{list-style:none; margin:14px 0 0}
+.checks li{position:relative; padding:0 0 0 36px; margin-bottom:12px;
+  font-size:15.5px; line-height:1.5; color:var(--tinta)}
+.checks li::before{content:"✅"; position:absolute; left:0; top:-1px; font-size:19px}
+
+.caixa-valor{background:var(--coral-nevoa); border:2px dashed var(--coral);
+  border-radius:16px; padding:16px 18px; text-align:center; margin:16px 0 0}
+.caixa-valor .linha1{font:800 17px var(--sans); color:var(--coral-esc)}
+.caixa-valor .linha2{font:700 15px var(--sans); color:var(--cinza); margin-top:5px}
+
+.urgencia{background:var(--mostarda-claro); border-radius:14px; padding:13px 16px;
+  text-align:center; font:700 15px var(--sans); color:#7A5A12; margin:18px 0 6px; line-height:1.5}
+.chamada{font:900 23px var(--sans); line-height:1.3; text-align:center;
+  letter-spacing:-.02em; margin:22px 0 8px}
+.bonus h4 .num{background:#FFE14D; color:#1b1b1b; padding:1px 6px; border-radius:4px; font-weight:900}
+
 .rodape{text-align:center; font-size:12px; color:#9AA7AD; padding:28px 0 6px; line-height:1.6}
 .alt{display:block; text-align:center; font-size:14px; color:var(--turq);
   margin-top:15px; font-weight:600}
@@ -362,67 +390,81 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
 <!-- ============ 10 · OFERTA ============ -->
 <section class="tela" data-tela="oferta">
   <div style="padding-top:28px">
-    <span class="selo">Hecho para tu resultado</span>
-    <h2 style="font-size:27px;margin-bottom:12px">
-      100 Proyectos de Aretes de Chaquira</h2>
-    <p class="sub" style="margin-bottom:18px">
-      Cada proyecto es <strong style="color:var(--tinta)">una página completa</strong>:
-      la foto del arete terminado, el gráfico a color, la leyenda, la lista de materiales
-      y 7 pasos ilustrados del primer nudo al remate.</p>
+    <span class="selo">✅ Tu resultado está listo</span>
+    <h2 class="titulao">
+      Tu acceso a los <span class="mt mt-am">100 PROYECTOS</span> está
+      <span class="mt mt-vd">CONFIRMADO</span> — y hoy entra al
+      <span class="mt mt-rs">PRECIO DE LANZAMIENTO</span>.</h2>
+    <p class="subao">
+      Por lo que respondiste, lo tuyo no es falta de habilidad: es
+      <strong>no tener el gráfico en la mano</strong>. Es exactamente eso lo que
+      se resuelve en la próxima hora.</p>
 
     <img src="assets/pagina-e-pecas-500.webp" alt="Cómo llega cada proyecto"
-         style="border-radius:16px;margin-bottom:20px" loading="lazy">
+         style="border-radius:16px;margin-bottom:8px" loading="lazy">
+    <p style="text-align:center;font-size:13.5px;color:var(--cinza);margin-bottom:20px">
+      Así llega cada uno de los 100 proyectos.</p>
+
+    <p class="chamada">Mira todo lo que entra hoy 👇</p>
 
     <div class="cartao">
-      <h3 style="font-size:16px;font-weight:800;margin-bottom:13px">Lo que recibes hoy</h3>
-      <ul class="lista" style="margin:0">
+      <ul class="checks" style="margin:0">
         <li><strong>100 proyectos completos</strong> en PDF, para el celular o para imprimir</li>
-        <li><strong>15 fáciles, 47 medios y 38 avanzados</strong> — empiezas por donde quieras</li>
-        <li>Gráfico a color y leyenda en cada página</li>
-        <li>Lista de materiales por modelo, sin que sobre nada</li>
-        <li>7 pasos ilustrados, del primer nudo al remate</li>
+        <li><span class="mt mt-am">15 fáciles</span>, 47 medios y 38 avanzados — empiezas por donde quieras</li>
+        <li><strong>Gráfico a color</strong> y leyenda en cada página</li>
+        <li><strong>Lista de materiales</strong> por modelo, sin que sobre nada</li>
+        <li><strong>7 pasos ilustrados</strong>, del primer nudo al remate</li>
         <li>El consejo de lo que suele salir mal — y cómo evitarlo</li>
-        <li><strong>Acceso de por vida</strong>, en el área de miembros</li>
+        <li><span class="mt mt-vd">ACCESO DE POR VIDA</span>, en el área de miembros</li>
       </ul>
     </div>
 
-    <h3 style="font-family:var(--serif);font-size:21px;margin:26px 0 6px">
-      Y los 6 bonos que nadie te cuenta</h3>
-    <p class="sub" style="margin-bottom:16px">
+    <p class="chamada" style="margin-top:28px">
+      🎁 Y los <span class="mt mt-am">6 BONOS</span> entran gratis</p>
+    <p class="sub" style="text-align:center;margin-bottom:16px">
       Lo que separa una pieza que parece casera de una que parece comprada.</p>
 
     <div class="cartao">
       <div class="bonus">
         <img src="assets/bonus-sm/b0-cristal.webp" alt="" loading="lazy">
-        <div><h4>30 Aretes de Cristal con Chaquira</h4>
+        <div><h4><span class="num">Bono 1</span> 30 Aretes de Cristal con Chaquira</h4>
           <p>Flecos, borlas y cascadas con brillo de fiesta. <span class="gratis">US$ 12 → gratis</span></p></div>
       </div>
       <div class="bonus">
         <img src="assets/bonus-sm/b1-cores.webp" alt="" loading="lazy">
-        <div><h4>Tabla de Conversión de Colores</h4>
+        <div><h4><span class="num">Bono 2</span> Tabla de Conversión de Colores</h4>
           <p>Qué turquesa comprar, con la referencia de cada marca. <span class="gratis">US$ 9 → gratis</span></p></div>
       </div>
       <div class="bonus">
         <img src="assets/bonus-sm/b2-acabamento.webp" alt="" loading="lazy">
-        <div><h4>Guía de Acabado Profesional</h4>
+        <div><h4><span class="num">Bono 3</span> Guía de Acabado Profesional</h4>
           <p>Tensión, remate que no se suelta y cómo esconder el nudo. <span class="gratis">US$ 12 → gratis</span></p></div>
       </div>
       <div class="bonus">
         <img src="assets/bonus-sm/b3-grades.webp" alt="" loading="lazy">
-        <div><h4>Grillas en Blanco para Crear</h4>
+        <div><h4><span class="num">Bono 4</span> Grillas en Blanco para Crear</h4>
           <p>Para dibujar tus propios gráficos. <span class="gratis">US$ 7 → gratis</span></p></div>
       </div>
       <div class="bonus">
         <img src="assets/bonus-sm/b4-precificar.webp" alt="" loading="lazy">
-        <div><h4>Cómo Poner Precio y Vender</h4>
+        <div><h4><span class="num">Bono 5</span> Cómo Poner Precio y Vender</h4>
           <p>El costo real, el margen y qué responder si te piden descuento. <span class="gratis">US$ 14 → gratis</span></p></div>
       </div>
       <div class="bonus" style="margin-bottom:0">
         <img src="assets/bonus-sm/b5-compras.webp" alt="" loading="lazy">
-        <div><h4>Lista de Compras para Principiantes</h4>
+        <div><h4><span class="num">Bono 6</span> Lista de Compras para Principiantes</h4>
           <p>Qué comprar, cuánto, y en qué no conviene ahorrar. <span class="gratis">US$ 7 → gratis</span></p></div>
       </div>
+
+      <div class="caixa-valor">
+        <p class="linha1">💎 Valor de los bonos por separado: <span class="mt mt-rs">US$ 61</span></p>
+        <p class="linha2">Hoy entran <strong>TODOS</strong>, sin costo extra.</p>
+      </div>
     </div>
+
+    <p class="chamada" style="margin-top:26px">
+      Llévate la colección <span class="mt mt-vd">+ LOS 6 BONOS</span><br>al precio de lanzamiento</p>
+    <p class="urgencia">🔥 El precio de lanzamiento es por tiempo limitado — después vuelve a US$ 39,90.</p>
 
     <div class="preco">
       <p style="font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--turq)">
@@ -431,7 +473,7 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
       <p class="por">US$ 9,90</p>
       <p class="obs">pago único · acceso inmediato · de por vida</p>
       <a class="botao" id="ctaCompleta" href="https://pay.hotmart.com/W107941743P?off=l8ltgmvq&checkoutMode=10">
-        QUIERO LA COLECCIÓN COMPLETA</a>
+        QUIERO MI ACCESO AHORA 👇</a>
       <p class="sob-botao">Pago seguro por Hotmart · garantía de 7 días</p>
     </div>
 
