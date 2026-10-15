@@ -185,8 +185,13 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
 <!-- ============ 0 · PORTADA ============ -->
 <section class="tela on" data-tela="inicio">
   <div style="text-align:center;padding:26px 0 0">
-    <img src="assets/hero-420.webp" alt="Aretes de chaquira" width="420" height="420"
-         style="border-radius:20px;margin:0 auto 22px;max-width:270px">
+    <!-- height:auto e obrigatorio: sem ele o atributo height="420" continua valendo
+         enquanto o max-width corta a largura, e a foto sai espremida na horizontal -->
+    <img src="assets/hero-420.webp" width="420" height="420" fetchpriority="high"
+         srcset="assets/hero-420.webp 420w, assets/hero-700.webp 700w"
+         sizes="270px"
+         alt="Mujer usando aretes de chaquira y sosteniendo la colección"
+         style="border-radius:20px;margin:0 auto 22px;width:270px;max-width:78%;height:auto">
     <h1 style="font-size:27px;margin-bottom:14px">
       ¿Las chaquiras pueden ser tu negocio desde casa? 🤔</h1>
     <p class="sub" style="margin-bottom:20px">
