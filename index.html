@@ -208,6 +208,29 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
 .pe-foto{text-align:center; font-size:12.5px; color:var(--cinza);
   margin:2px 0 22px; line-height:1.5}
 
+/* ---------- garantia ---------- */
+.garantia{display:flex; align-items:center; gap:16px; margin:30px 0 8px;
+  padding:18px 16px; background:var(--branco); border:1px solid var(--borda);
+  border-radius:18px}
+.garantia img{flex:0 0 120px; width:120px; height:120px}
+.garantia h3{font:900 19px/1.15 var(--sans); letter-spacing:-.01em; margin:0 0 4px;
+  text-transform:uppercase}
+.garantia .medo{font:900 italic 17px/1.15 var(--sans); color:#D62828; margin:0 0 8px}
+.garantia p{font-size:13.5px; line-height:1.45; color:var(--cinza); margin:0}
+.garantia p strong{color:var(--tinta)}
+
+/* ---------- depoimentos ----------
+   Sem foto de rosto de proposito: a inicial num circulo nao finge ser ninguem. */
+.dep{background:var(--branco); border:1px solid var(--borda); border-radius:16px;
+  padding:15px 16px; margin-bottom:12px; display:flex; gap:13px}
+.dep .ini{flex:0 0 42px; width:42px; height:42px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font:900 16px var(--sans); color:#fff; letter-spacing:.01em}
+.dep .corpo{flex:1; min-width:0}
+.dep .estrelas{color:#F5A623; font-size:13px; letter-spacing:1px; line-height:1}
+.dep h4{font:800 15.5px var(--sans); margin:5px 0 6px; color:var(--tinta)}
+.dep p{font-size:14.5px; line-height:1.5; color:var(--cinza); margin:0}
+
 .rodape{text-align:center; font-size:12px; color:#9AA7AD; padding:28px 0 6px; line-height:1.6}
 .alt{display:block; text-align:center; font-size:14px; color:var(--turq);
   margin-top:15px; font-weight:600}
@@ -528,6 +551,47 @@ details p{margin-top:10px; font-size:15px; color:var(--cinza)}
         QUIERO MI ACCESO AHORA 👇</a>
       <p class="sob-botao">Pago seguro por Hotmart · garantía de 7 días</p>
     </div>
+
+    <div class="garantia">
+      <img src="assets/selo-garantia.webp" width="380" height="380"
+           alt="Sello de 7 días de garantía" loading="lazy">
+      <div>
+        <h3>7 días de garantía</h3>
+        <p class="medo">¡Pruébalo sin miedo!</p>
+        <p>Si no es para ti, escribes dentro de los 7 días y te devolvemos
+           <strong>el 100%</strong> por el mismo medio de pago. Sin preguntas.</p>
+      </div>
+    </div>
+
+    <p class="chamada" style="margin-top:30px">
+      Lo que dicen las <span class="mt mt-am">últimas clientas</span></p>
+
+      <div class="dep">
+        <div class="ini" style="background:#E5446E">SG</div>
+        <div class="corpo">
+          <div class="estrelas">★★★★★</div>
+          <h4>Sandra Patricia Guarguati</h4>
+          <p>Amigaaa me encantaron los diseños 😍❤️ pensé que iba a ser más difícil pero ya hice mis primeras pulseritas jajaja ¡¡quedaron hermosas!!</p>
+        </div>
+      </div>
+
+      <div class="dep">
+        <div class="ini" style="background:#12707C">CF</div>
+        <div class="corpo">
+          <div class="estrelas">★★★★★</div>
+          <h4>Constanza Fuentes</h4>
+          <p>Yo ya hacía pulseras pero siempre terminaba haciendo los mismos modelos jajaja. Me gustó mucho la variedad, hay combinaciones que ni se me habían ocurrido 🥰</p>
+        </div>
+      </div>
+
+      <div class="dep">
+        <div class="ini" style="background:#B8860B">MA</div>
+        <div class="corpo">
+          <div class="estrelas">★★★★★</div>
+          <h4>Mariela Álvarez</h4>
+          <p>Me gustaron muchísimo los proyectos 😍 sobre todo porque puedo hacer varios estilos sin estar buscando ideas por todos lados. Ya estoy preparando mis primeras piezas para vender 🙌❤️</p>
+        </div>
+      </div>
 
     <h3 style="font-family:var(--serif);font-size:21px;margin:30px 0 12px">Preguntas frecuentes</h3>
     <details><summary>¿Necesito experiencia?</summary>
